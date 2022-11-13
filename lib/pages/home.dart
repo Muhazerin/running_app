@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:running_app/pages/endurance_run.dart';
+import 'package:running_app/pages/interval_run.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +26,12 @@ class HomePage extends StatelessWidget {
                 child: Container(),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => const EnduranceRun()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16.0),
@@ -43,7 +50,13 @@ class HomePage extends StatelessWidget {
                 child: Container(),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const IntervalRun(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(16.0),
